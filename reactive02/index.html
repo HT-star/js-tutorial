@@ -1,0 +1,15 @@
+<script type="module">
+    import {effect, trigger} from './reactive.js'
+    const obj = {a: 0};
+    // set call back
+    effect(() => {
+        console.log(obj.a);
+    })
+    // exec set call back
+    // result 0
+    trigger()
+    obj.a = 1;
+    // exec set call back
+    // result 1
+    trigger()
+</script>
