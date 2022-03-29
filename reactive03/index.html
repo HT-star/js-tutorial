@@ -1,0 +1,12 @@
+<script type="module">
+    import {reactive, effect} from './reactive.js'
+    const obj = reactive({a: 0});
+    // set call back
+    effect(() => {
+        console.log(obj.a);
+    })
+    
+    obj.a = 1;
+    obj.a = 2;
+    obj.a = 3;
+</script>
